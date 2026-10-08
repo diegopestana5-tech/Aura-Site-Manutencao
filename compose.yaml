@@ -1,0 +1,7 @@
+services:
+  aura-manutencao:
+    build: .
+    container_name: aura-manutencao
+    ports:
+      - "8081:80"
+    restart: unless-stopped

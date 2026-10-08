@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f5f1">
+  <meta name="description" content="A Aura está passando por uma breve manutenção. Fale conosco pelo WhatsApp.">
+  <title>Em manutenção | Aura</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #39312e;
+      --muted: #776c66;
+      --accent: #a46e67;
+      --accent-dark: #855650;
+      --paper: #f8f5f1;
+      --card: #fffdfa;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 28px 18px;
+      background:
+        radial-gradient(ellipse at 50% 10%, rgba(218, 194, 181, .34), transparent 42%),
+        var(--paper);
+      color: var(--ink);
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    main {
+      width: min(100%, 560px);
+      padding: clamp(13px, 8vw, 0px) clamp(0px, 7vw, 0px);
+      text-align: center;
+      background: var(--card);
+      border: 1px solid rgba(164, 110, 103, .13);
+      border-radius: 24px;
+      box-shadow: 0 22px 70px rgba(75, 53, 43, .08);
+    }
+
+    .logo {
+      width: min(190px, 58vw);
+      height: 118px;
+      margin: 0 auto 32px;
+      display: grid;
+      place-items: center;
+    }
+
+    .logo img {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    /* Espaço reservado até adicionar o arquivo assets/aura_logo_dourado_degrade.png. */
+    .logo-placeholder {
+      color: var(--accent);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 44px;
+      letter-spacing: .16em;
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--accent-dark);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+	  margin-top: 78px;
+    }
+
+    h1 {
+      max-width: 440px;
+      margin: 0 auto 16px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(32px, 7vw, 46px);
+      font-weight: 400;
+      line-height: 1.12;
+    }
+
+    .message {
+      max-width: 390px;
+      margin: 0 auto 30px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .whatsapp {
+      min-height: 54px;
+      padding: 0 24px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-radius: 999px;
+      background: #287b59;
+      color: white;
+      font-size: 15px;
+      font-weight: 650;
+      text-decoration: none;
+      transition: background .18s ease, transform .18s ease;
+    }
+
+    .whatsapp:hover { background: #206749; transform: translateY(-1px); }
+    .whatsapp:focus-visible { outline: 3px solid #9fcab4; outline-offset: 4px; }
+    .whatsapp svg { width: 21px; height: 21px; fill: currentColor; }
+
+    .footer {
+      margin: 28px 0 0;
+      color: #9b9089;
+      font-size: 12px;
+      letter-spacing: .04em;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="logo" aria-label="Logo Aura">
+      <!-- Coloque seu logo em assets/aura_logo_dourado_degrade.png. Para outro nome ou formato, altere o caminho abaixo. -->
+      <img src="assets/aura_logo_dourado_degrade.png" alt="Aura" onerror="this.hidden=true; this.nextElementSibling.hidden=false">
+      <span class="logo-placeholder" hidden>AURA</span>
+    </div>
+
+    <p class="eyebrow">Estamos em manutenção</p>
+    <h1>Em breve, estaremos de volta</h1>
+    <p class="message">
+      Estamos preparando tudo com carinho para atender você ainda melhor.
+      Enquanto isso, nossa equipe continua disponível pelo WhatsApp.
+    </p>
+
+    <a class="whatsapp"
+       href="https://wa.me/5511969993165?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20a%20Aura."
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Fale com a Aura pelo WhatsApp">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M16.02 3C8.86 3 3.04 8.77 3.04 15.88c0 2.27.6 4.48 1.75 6.42L3 29l6.91-1.8a13.1 13.1 0 0 0 6.1 1.5h.01c7.15 0 13-5.78 13-12.88 0-3.44-1.35-6.67-3.8-9.1A12.92 12.92 0 0 0 16.02 3Zm0 23.52h-.01a10.9 10.9 0 0 1-5.55-1.51l-.4-.24-4.1 1.07 1.1-3.97-.26-.41a10.68 10.68 0 0 1-1.66-5.58c0-5.98 4.9-10.84 10.9-10.84 2.9 0 5.63 1.12 7.68 3.16a10.72 10.72 0 0 1 3.2 7.67c0 5.98-4.9 10.85-10.9 10.85Zm5.98-8.13c-.33-.16-1.94-.95-2.24-1.06-.3-.11-.52-.16-.74.16-.22.33-.85 1.06-1.04 1.28-.19.22-.38.25-.71.08-.33-.16-1.38-.51-2.62-1.62-.97-.86-1.63-1.92-1.82-2.25-.19-.33-.02-.51.14-.67.15-.14.33-.38.49-.57.16-.19.22-.33.33-.55.11-.22.06-.41-.03-.57-.08-.16-.74-1.77-1.02-2.43-.27-.64-.54-.55-.74-.56h-.63c-.22 0-.57.08-.87.41-.3.33-1.14 1.11-1.14 2.72s1.17 3.15 1.33 3.37c.16.22 2.29 3.48 5.55 4.88.78.34 1.39.55 1.87.7.79.25 1.5.21 2.06.13.63-.1 1.94-.79 2.21-1.56.27-.77.27-1.44.19-1.58-.08-.14-.3-.22-.63-.38Z"/>
+      </svg>
+      Fale conosco pelo WhatsApp
+    </a>
+
+    <p class="footer">Aura · Clínica de estética</p>
+  </main>
+</body>
+</html>
