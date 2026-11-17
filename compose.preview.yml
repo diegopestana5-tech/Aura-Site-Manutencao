@@ -1,0 +1,10 @@
+services:
+  aura-preview:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_GTM_ID: GTM-NQ3WC8FJ
+    container_name: aura-landing-preview
+    ports:
+      - "8082:80"
+    restart: unless-stopped

@@ -1,0 +1,3 @@
+Coloque aqui fotos REAIS da Clínica Aura.
+Nomes: hero.jpg, espelho.jpg, sobre.jpg, recepcao.jpg, iva.jpg, carol.jpg, kit.jpg, galeria-1.jpg, galeria-2.jpg, galeria-3.jpg.
+O site mostra um placeholder elegante enquanto os arquivos não existirem.

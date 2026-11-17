@@ -2,3 +2,9 @@
 .DS_Store
 Thumbs.db
 README.md
+node_modules
+.next
+out
+.gitignore
+.env*
+npm-debug.log*
