@@ -1,7 +1,12 @@
+
 services:
   aura-manutencao:
-    build: .
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_GTM_ID: GTM-NQ3WC8FJ
     container_name: aura-manutencao
     ports:
       - "8081:80"
     restart: unless-stopped
+s
