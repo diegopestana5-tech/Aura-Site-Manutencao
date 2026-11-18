@@ -6,6 +6,8 @@ COPY package*.json ./
 RUN npm ci
 
 COPY . .
+ARG NEXT_PUBLIC_GTM_ID
+ENV NEXT_PUBLIC_GTM_ID=$NEXT_PUBLIC_GTM_ID
 RUN npm run build
 
 FROM nginx:alpine
@@ -13,6 +15,3 @@ FROM nginx:alpine
 COPY --from=builder /app/out/ /usr/share/nginx/html/
 
 EXPOSE 80
-
-ARG NEXT_PUBLIC_GTM_ID
-ENV NEXT_PUBLIC_GTM_ID=$NEXT_PUBLIC_GTM_ID
