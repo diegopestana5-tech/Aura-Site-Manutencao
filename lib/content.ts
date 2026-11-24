@@ -32,7 +32,7 @@ export const journey = [
   {title:'Seu retorno já combinado.',description:'Antes de você sair, a gente já deixa seu próximo atendimento marcado.'}
 ];
 export const staff = [
-  {name:'Iva - Fundadora e Biomédica Responsável Técnica\nCRBM 55130',title:'Tecnologias estéticas | Gestão da Clínica Aura',description:'À frente da Aura, une conhecimento técnico e visão estratégica para proporcionar uma experiência de cuidado única. Sua atuação é voltada às tecnologias faciais, valorizando a inovação, a naturalidade e a individualidade de cada paciente.',image:'/fotos/iva.jpg'},
+  {name:'Dra. Iva - Fundadora e Biomédica Responsável Técnica\nCRBM 55130',title:'Tecnologias estéticas | Gestão da Clínica Aura',description:'À frente da Aura, une conhecimento técnico e visão estratégica para proporcionar uma experiência de cuidado única. Sua atuação é voltada às tecnologias faciais, valorizando a inovação, a naturalidade e a individualidade de cada paciente.',image:'/fotos/iva.jpg'},
   {name:'Dra. Carolina - Biomédica Esteta\nCRBM 46552',title:'Estética facial e corporal | Procedimentos injetáveis',description:'Com ampla experiência em procedimentos injetáveis, destaca-se pela expertise em harmonização facial e embelezamento labial. Sua abordagem valoriza a naturalidade, a harmonia e a individualidade de cada paciente.',image:'/fotos/carol.jpg'},
   {name:'Kit - Esteticista',title:'Cuidados faciais e corporais',description:'Com uma abordagem delicada e individualizada, dedica-se aos cuidados com a pele e ao bem-estar, por meio de tratamentos faciais e corporais que valorizam a saúde, a beleza natural e a experiência de cada paciente.',image:'/fotos/kit.jpg'}
 ];
