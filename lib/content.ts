@@ -12,7 +12,7 @@ export const treatments = [
     {name:'Manchas, rejuvenescimento, flacidez',description:'Cada indivíduo tem uma pele, por isso são protocolos individualizados. Na avaliação, a gente descobre a sua indicação e escolhe um caminho.'}
   ]},
   {name:'Corpo e bem-estar',icon:'sparkle',items:[
-    {name:'Aura Massage',description:'Protocolo massagem da clínica.',authorial:true},
+    {name:'Aura Massage',description:'Protocolo de massagem da clínica.',authorial:true},
     {name:'PEIM',description:'Tratamento para vasinhos.'},
     {name:'Enzimas',description:'Indicação definida na avaliação.'},
     {name:'Ultrassom estético',description:'Indicação definida na avaliação.'},
