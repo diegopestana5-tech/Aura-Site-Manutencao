@@ -2,9 +2,10 @@ type PhotoAdjustment = {
   zoom?: number;
   x?: number;
   y?: number;
+  posicaoY?: number;
 };
 
-function ajustarFoto(name: string, { zoom, x, y }: PhotoAdjustment = {}) {
+function ajustarFoto(name: string, { zoom, x, y, posicaoY }: PhotoAdjustment = {}) {
   const selector = `.photo--${CSS.escape(name)}`;
   const photo = document.querySelector<HTMLElement>(selector);
 
@@ -22,6 +23,15 @@ function ajustarFoto(name: string, { zoom, x, y }: PhotoAdjustment = {}) {
       (zoom !== undefined && zoom <= 0)) {
     console.warn('Use números para x e y e um zoom maior que zero.');
     return;
+  }
+
+  if (posicaoY !== undefined) {
+    if (name !== 'galeria-1' || !Number.isFinite(posicaoY) || posicaoY < 0 || posicaoY > 100) {
+      console.warn('Use posicaoY com um número de 0 a 100 na foto galeria-1.');
+      return;
+    }
+
+    photo.style.setProperty('--photo-position-y-celular', `${posicaoY}%`);
   }
 
   const suffix = window.matchMedia('(max-width: 1024px)').matches ? '-mobile' : '';

@@ -192,6 +192,13 @@
   --photo-y: -277px;
   --photo-inset: 5px;
   --photo-position-mobile: center 63%;
+  --photo-position-y-celular: 100%;
+}
+
+@media (max-width: 760px) {
+  .photo--galeria-1 {
+    --photo-position-mobile: center var(--photo-position-y-celular);
+  }
 }
 
 .photo--galeria-2 {
