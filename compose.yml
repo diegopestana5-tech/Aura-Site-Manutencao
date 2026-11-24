@@ -5,7 +5,7 @@ services:
       context: .
       args:
         NEXT_PUBLIC_GTM_ID: GTM-NQ3WC8FJ
-        NEXT_PUBLIC_MAP_EMBED_URL: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.331383482921!2d-46.51831662548485!3d-23.62830056405323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce68027d1824c7%3A0x3d78cb3478182a76!2sAv.%20Martim%20Francisco%2C%201054%20-%20Vila%20Alto%20de%20Santo%20Andre%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009230-700!5e0!3m2!1spt-BR!2sbr!4v1795391504246!5m2!1spt-BR!2sbr"
+        NEXT_PUBLIC_GOOGLE_MAPS_EMBED_URL: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.331383482921!2d-46.51831662548485!3d-23.62830056405323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce68027d1824c7%3A0x3d78cb3478182a76!2sAv.%20Martim%20Francisco%2C%201054%20-%20Vila%20Alto%20de%20Santo%20Andre%2C%20Santo%20Andr%C3%A9%20-%20SP%2C%2009230-700!5e0!3m2!1spt-BR!2sbr!4v1795391504246!5m2!1spt-BR!2sbr"
     container_name: aura-manutencao
     ports:
       - "8081:80"

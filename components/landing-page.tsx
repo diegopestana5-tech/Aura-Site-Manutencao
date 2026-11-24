@@ -1,9 +1,10 @@
   'use client';
 
 import Image from 'next/image';
-import { useState, type MouseEvent } from 'react';
+import { useEffect, useState, type MouseEvent } from 'react';
 import { ArrowRight, CalendarCheck2, Check, ChevronDown, Heart, Instagram, Leaf, MapPin, Menu, MessageCircle, ShieldCheck, Sparkles, Star, X } from 'lucide-react';
 import { benefits, faq, journey, staff, treatments } from '@/lib/content';
+import { installPhotoPreview } from '@/lib/photo-preview';
 
 declare global { interface Window { dataLayer?: Record<string, unknown>[]; gtag?: (...args: unknown[]) => void; } }
 const configuredWhatsApp = (process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '').replace(/\D/g, '');
@@ -62,9 +63,10 @@ function Photo({
   image?: string;
 }) {
   const [failed, setFailed] = useState(false);
+  const photoName = image?.split('/').pop()?.replace(/\.[^.]+$/, '');
 
   return (
-    <div className={`photo ${className}`}>
+    <div className={`photo ${className}${photoName ? ` photo--${photoName}` : ''}`}>
       {image && !failed ? (
         <img
           src={image}
@@ -102,6 +104,9 @@ const navigation=[['Tratamentos','#tratamentos'],['Sobre a Aura','#sobre'],['Equ
 export default function LandingPage(){
  const [mobileOpen,setMobileOpen]=useState(false);
  const [activeFaq,setActiveFaq]=useState<number|null>(null);
+ useEffect(() => {
+   if (process.env.NODE_ENV === 'development') return installPhotoPreview();
+ }, []);
  return <>
  <header className="site-header"><div className="shell header-inner"><Mark/><nav className={`nav ${mobileOpen?'nav--open':''}`} aria-label="Navegação principal">{navigation.map(([t,h])=><a key={h} href={h} onClick={()=>setMobileOpen(false)}>{t}</a>)}</nav><div className="header-actions"><Cta utmContent="cabecalho" className="header-cta">Agendar minha avaliação</Cta><button type="button" className="menu-button" aria-label={mobileOpen?'Fechar menu':'Abrir menu'} aria-expanded={mobileOpen} onClick={()=>setMobileOpen(v=>!v)}>{mobileOpen?<X/>:<Menu/>}</button></div></div></header>
  <main>
